@@ -33,8 +33,9 @@ def average(numbers):
     total = sum(numbers)
     total = float(total)
     return total / len(numbers)
-# print average(tyler["tests"])  # => 100.0
-# print average(alice["homework"])  # => 97.5
+print average(tyler["tests"])  # => 100.0
+print average(alice["homework"])  # => 97.5
+print
 
 # Write a function called get_average that takes a student dictionary as input and returns his/her weighted average.
 def get_average(student):
@@ -67,3 +68,13 @@ print get_letter_grade(get_average(alice))
 print get_letter_grade(get_average(lloyd))
 print
 
+# Get class average; take the average for each student and then calculate the average of those averages.
+def get_class_average(students):
+    results = []
+    for student in students:
+        results.append(get_average(student))
+    return average(results)
+
+students = [lloyd, alice, tyler]
+print get_class_average(students)  # => 83.8666666667
+print get_letter_grade(get_class_average(students))  # => B
