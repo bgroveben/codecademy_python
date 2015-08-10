@@ -46,3 +46,24 @@ def get_average(student):
 print get_average(tyler)  # => 79.9
 print get_average(alice)  # => 91.15
 print get_average(lloyd)  # => 80.55
+print
+
+# Write a get_letter_grade function that takes a number score as input and returns a string with the
+# letter grade that that student should receive.
+def get_letter_grade(score):
+    if score >= 90:
+        return "A"
+    elif score >= 80:
+        return "B"
+    elif score >= 70:
+        return "C"
+    elif score >= 60:
+        return "D"
+    else:
+        return "F"
+
+print get_letter_grade(get_average(tyler))
+print get_letter_grade(get_average(alice))
+print get_letter_grade(get_average(lloyd))
+print
+
