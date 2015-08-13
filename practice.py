@@ -55,3 +55,21 @@ def is_prime(x):
         return True
 
 print is_prime(47)
+print
+
+
+# Define a function called reverse that takes a string textand returns that string in reverse.
+# For example: reverse("abcd") should return "dcba".
+# You may not use reversed or [::-1] to help you with this.
+# You may get a string containing special characters (for example, !, @, or #).
+def reverse(text):
+    forwards = []
+    backwards = []
+    for letter in text:
+        forwards.append(letter)
+    while len(forwards) > 0:
+        backwards.append(forwards.pop())
+    return ''.join(map(str, backwards))
+
+print reverse("Python!")
+print
